@@ -1,6 +1,3 @@
-import notifier from 'node-notifier'
-
-notifier.notify({
-  'title': 'My notification',
-  'message': 'Hello, there!'
-})
+require('babel-register');
+require('babel-polyfill');
+require('./app'); 

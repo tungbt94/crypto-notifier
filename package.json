@@ -19,10 +19,15 @@
   },
   "homepage": "https://github.com/tungbt94/crypto-notifier#readme",
   "dependencies": {
-    "node-notifier": "^5.1.2"
+    "babel-register": "^6.26.0",
+    "cheerio": "^1.0.0-rc.2",
+    "node-notifier": "^5.1.2",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "rimraf": "^2.6.2"
   }
