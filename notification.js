@@ -1,6 +1,11 @@
 import notifier from 'node-notifier'
 
-notifier.notify({
-  'title': 'My notification',
-  'message': 'Hello, there!'
-})
+const notify = async (title="title", message="message") => {
+  notifier.notify({
+    title: title,
+    message: message,
+    sound: true
+  })
+}
+
+module.exports.notify = notify;

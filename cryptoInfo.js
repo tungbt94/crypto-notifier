@@ -17,7 +17,7 @@ const getHTMLFromUrl = (url) => {
   });
 }
 
-const getCryptoInfoFromHTML = async (coin="bitcoin", fiat="usd") => {
+const getCryptoInfoFromHTML = async (url, coin, fiat) => {
   try {
     if (coin !== "bitcoin" || fiat !== "usd") {
       url = `${URL}/${coin}/${fiat}`
@@ -39,8 +39,8 @@ const getCryptoInfoFromHTML = async (coin="bitcoin", fiat="usd") => {
 }
 
 const getCryptoInfo = async (coin="bitcoin", fiat="usd") => {
-  let result = await getCryptoInfoFromHTML(coin, fiat);
+  let result = await getCryptoInfoFromHTML(DEFAULT_URL, coin, fiat);
   return result;
 }
 
-module.exports = { getCryptoInfo }
+module.exports.getCryptoInfo = getCryptoInfo;
