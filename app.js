@@ -7,7 +7,7 @@ const DEFAULT_FIAT = "usd";
 
 const getCryptoAndNotify = async (coin=DEFAULT_COIN, fiat=DEFAULT_FIAT) => {
   let content = await getCryptoInfo(coin, fiat);
-  let title = "ethereum";
+  let title = DEFAULT_COIN;
   let message = `Price of ethereum:${content[1]}${fiat} from ${content[0]}`;
   notify(title, message);
 }
